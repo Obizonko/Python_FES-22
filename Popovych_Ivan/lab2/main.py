@@ -6,6 +6,16 @@ from inspector_bee import InspectorBee
 
 
 def main():
+    """Run the simulation.
+
+    This function creates a grid of locations and randomly selects a number of
+    them to be food sources. Bees are then created and sent to gather food from
+    the sources, with an inspector bee directing their movements. The simulation
+    ends when all food sources have been depleted.
+
+    Returns:
+        None
+    """
     grid = [[i, j] for i in range(Config.width + 1)
             for j in range(Config.height + 1)]
     print(grid)
