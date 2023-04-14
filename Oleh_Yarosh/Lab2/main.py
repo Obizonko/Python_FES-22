@@ -15,7 +15,7 @@ def run(size: tuple[int, int] = (100, 100),
     total_food_amout = 0
     for i in range(food_sources_count):
         x, y = np.random.randint(0, field.width), np.random.randint(0, field.height)
-        field.food_sources.append(Food_Source((x, y), np.random.randint(min_food_amout, max_food_amout)))
+        field.food_sources.append(FoodSource((x, y), np.random.randint(min_food_amout, max_food_amout)))
         total_food_amout += field.food_sources[-1].food_amount
 
     print(f"Total food amout: {total_food_amout}")

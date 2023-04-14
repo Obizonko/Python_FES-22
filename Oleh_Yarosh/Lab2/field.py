@@ -9,7 +9,7 @@ class Field:
         self.food_sources = []
 
 
-class Food_Source:
+class FoodSource:
     """A food source where bees can gather food."""
     def __init__(self, position: tuple[int, int], food_amount: int):
         """Create a food source with the given position and food amount."""

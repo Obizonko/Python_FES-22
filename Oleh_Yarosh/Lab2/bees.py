@@ -20,6 +20,9 @@ class EmployedBee:
         self.target_food_source = None
 
     def fly(self, position, food_source=None):
+        """
+        Move bee to the given position.
+        """
         # This function makes the bee fly to the source
         self.position = position
         self.target_food_source = food_source
@@ -27,6 +30,9 @@ class EmployedBee:
             print(f"Employed bee is now at {self.position}.")
 
     def gather(self):
+        """
+        Gather food from the target food source.
+        """
         self.food_amout = min(self.max_food_amout, self.target_food_source.food_amount)
         self.target_food_source.food_amount -= self.food_amout
         self.target_food_source.taken_food += self.food_amout
@@ -34,6 +40,9 @@ class EmployedBee:
         print(f"Employed bee gathered {self.food_amout} food from {self.position}.")
             
     def upload_food(self, hive):
+        """
+        Upload food to the hive.
+        """
         hive.food_bank += self.food_amout
         self.food_amout = 0
         print(f"Hive now has {hive.food_bank} food in the bank.")
