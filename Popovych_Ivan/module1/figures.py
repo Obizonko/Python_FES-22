@@ -1,5 +1,6 @@
 from utils import check_correct_move
-
+white = "white"
+black = "black"
 
 class Piece:
     def __init__(self, color, location):
@@ -13,6 +14,9 @@ class Piece:
 
     def get_location(self) -> tuple:
         return self.location
+
+    def get_live_status(self):
+        return self.is_avile
 
     def set_location(self, location: tuple):
         self.location = location
@@ -35,7 +39,7 @@ class Piece:
 class King(Piece):
     def __init__(self, color, location):
         super().__init__(color, location)
-        self.name = "♔"
+        self.name = "♔" if color == black else "♚"
 
     def generate_moves(self):
         loc = self.get_location()
@@ -65,7 +69,7 @@ class King(Piece):
 class Knight(Piece):
     def __init__(self, color, location):
         super().__init__(color, location)
-        self.name = "♘"
+        self.name = "♘" if color == black else "♞"
 
     def generate_moves(self):
         loc = self.get_location()
@@ -96,7 +100,7 @@ class Knight(Piece):
 class Bishop(Piece):
     def __init__(self, color, location):
         super().__init__(color, location)
-        self.name = "♗"
+        self.name = "♗" if color == black else "♝"
 
     def generate_moves(self):
         loc = self.get_location()
@@ -165,7 +169,7 @@ class Bishop(Piece):
 class Pawn(Piece):
     def __init__(self, color, location):
         super().__init__(color, location)
-        self.name = "♙"
+        self.name = "♙" if self.color == black else "♟"
 
     def generate_moves(self):
         loc = self.get_location()
@@ -183,7 +187,7 @@ class Pawn(Piece):
 class Queen(Piece):
     def __init__(self, color, location):
         super().__init__(color, location)
-        self.name = "♕"
+        self.name = "♕" if self.color == black else "♛"
 
 
     def generate_moves(self):
@@ -290,7 +294,7 @@ class Queen(Piece):
 class Rook(Piece):
     def __init__(self, color, location):
         super().__init__(color, location)
-        self.name = "♖"
+        self.name = "♖" if self.color == black else "♜"
 
     def generate_moves(self):
         loc = self.get_location()
