@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<title>My FastAPI Project</title>
+<link rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<h1>Hello, FastAPI!</h1>
+<p>This is a sample HTML page for your FastAPI project.</p>
+<p class="dynamic-content">Dynamic content: 2023-04-24 17:28:49.779899</p>
+<button onclick="redirectToSimulation()">Go to Simulation</button>
+<button onclick="redirectToSimulationJSON()">Go to Simulation(json)</button>
+<script>
+    function redirectToSimulation() {
+            window.location.href = "/simulation";
+        }
+        function redirectToSimulationJSON() {
+            window.location.href = "/simulation-json";
+        }
+</script>
+</body>
+</html>
