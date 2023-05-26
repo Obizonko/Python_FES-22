@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<title>My FastAPI Project</title>
+<link rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<button onclick="redirectToRoot()">Go to Root</button>
+<h1>This is the result of the simulation</h1>
+<div class="dynamic-content">{{ dynamic_content | safe }}</div>
+<script>
+  function redirectToRoot() {
+    window.location.href = "/";
+  }
+</script>
+</body>
+</html>
