@@ -33,3 +33,4 @@ class Product:
 
     def __init__(self, features: list[Task]) -> None:
         self.features = features
+        self.
